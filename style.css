@@ -2,21 +2,24 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Prevent scrollbars */
+    overflow: hidden;
 }
 
 body {
     background: #ffacb8; 
-    position: relative; /* Set position to relative */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 #particles-js {
-    position: absolute; /* Set position to absolute */
+    position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    z-index: -1; /* Move particles behind other content */
+    z-index: -1;
 }
 
 .calculator {
@@ -26,7 +29,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    z-index: 1; /* Ensure calculator is above particles */
+    z-index: 1;
 }
 
 .result {
@@ -54,7 +57,7 @@ ul {
 }
 
 ul li {
-    background: #ff5e78; /* Pink buttons */
+    background: #ff5e78;
     color: #fff;
     font-family: cursive;
     padding: 20px 0;
@@ -65,7 +68,7 @@ ul li {
 }
 
 ul li:hover {
-    background-color: #ff859c; /* Lighter pink on hover */
+    background-color: #ff859c;
 }
 
 ul li:active {
