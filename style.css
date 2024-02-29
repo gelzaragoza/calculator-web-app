@@ -2,13 +2,21 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow: hidden; /* Prevent scrollbars */
 }
 
 body {
     background: #ffacb8; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative; /* Set position to relative */
+}
+
+#particles-js {
+    position: absolute; /* Set position to absolute */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Move particles behind other content */
 }
 
 .calculator {
@@ -18,6 +26,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    z-index: 1; /* Ensure calculator is above particles */
 }
 
 .result {
