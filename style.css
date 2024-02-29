@@ -5,14 +5,15 @@ html, body {
 }
 
 body {
-    background: #f3e6e8; 
+    background: #f3e6e8; /* Light pink background */
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Arial, sans-serif;
 }
 
 .calculator {
-    background: #ff5e78; 
+    background: #ff5e78; /* Pink background */
     width: 300px;
     padding: 15px;
     border-radius: 10px;
@@ -21,7 +22,7 @@ body {
 }
 
 .result {
-    background-color: #ffbfd4; 
+    background-color: #ffbfd4; /* Light pink result area */
     color: #3b3b32;
     width: calc(100% - 30px);
     margin: 8px 0 20px 0;
@@ -31,7 +32,6 @@ body {
     font-size: 36px;
     padding-right: 10px;
     overflow: hidden;
-    font-family: Arial, sans-serif;
     border-radius: 5px;
 }
 
@@ -62,7 +62,6 @@ ul li:hover {
 ul li:active {
     position: relative;
     top: 2px;
-    box-shadow: none;
 }
 
 ul li:last-child {
@@ -75,4 +74,22 @@ ul li:last-child {
     font-size: 0.75rem;
     text-align: right;
     margin-top: 20px;
+}
+
+.clear-button {
+    background-color: #ff859c; /* Lighter pink for clear button */
+}
+
+.operator {
+    background-color: #ff3d58; /* Darker pink for operators */
+}
+
+.highlight {
+    background-color: #ff3d58 !important; /* Highlight color */
+}
+
+.error-message {
+    color: #ff3d58; /* Red color for error message */
+    font-weight: bold;
+    margin-top: 10px;
 }
