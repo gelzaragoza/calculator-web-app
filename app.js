@@ -1,28 +1,32 @@
-const $lis = document.querySelectorAll('ul li');
+document.addEventListener('DOMContentLoaded', function() {
+    const $lis = document.querySelectorAll('.calculator ul li');
+    const $result = document.querySelector('.result');
 
-$lis.forEach((node) => {
-    node.addEventListener('mousedown', function(e) {
-        const value = node.innerText.trim();
-        const $result = document.querySelector('.result');
-        const resultText = $result.innerText.trim();
+    $lis.forEach((node) => {
+        node.addEventListener('click', function(e) {
+            const value = node.innerText.trim();
+            let resultText = $result.innerText.trim();
 
-        if(resultText == '0' || resultText == 'undefined' || resultText == 'Infinity') {
-            $result.innerText = ''
-        }
+            if (resultText === '0' || resultText === 'undefined' || resultText === 'Infinity') {
+                resultText = '';
+            }
 
-        if(value == '=') {
-            let solution = eval(resultText)
-            $result.innerText = solution;
-            return true;
-        }
-
-        if(value.toLowerCase() == "c") {
-            $result.innerText = '';
-            return true;
-        }
-
-        $result.append(value);
-
-
-    })
-})
+            if (value === '=') {
+                try {
+                    const solution = eval(resultText);
+                    if (!isNaN(solution) && isFinite(solution)) {
+                        $result.innerText = solution;
+                    } else {
+                        throw new Error('Invalid expression');
+                    }
+                } catch (err) {
+                    $result.innerText = 'Error';
+                }
+            } else if (value.toLowerCase() === 'c') {
+                $result.innerText = '';
+            } else {
+                $result.append(value);
+            }
+        });
+    });
+});
