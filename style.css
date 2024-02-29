@@ -3,6 +3,7 @@ html, body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    font-family: Arial, sans-serif; /* Set a default font */
 }
 
 body {
@@ -11,7 +12,6 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    font-family: Arial, sans-serif;
 }
 
 #particles-js {
@@ -45,7 +45,6 @@ body {
     font-size: 2rem;
     padding-right: 1rem;
     overflow: hidden;
-    font-family: Arial, sans-serif;
     border-radius: 5px;
 }
 
@@ -61,7 +60,6 @@ ul {
 ul li {
     background: #ff5e78;
     color: #fff;
-    font-family: cursive;
     padding: 1rem 0;
     font-size: 1.5rem;
     border-radius: 10px;
@@ -85,7 +83,6 @@ ul li:last-child {
 
 .signature {
     color: #fff;
-    font-family: cursive;
     font-size: 0.75rem;
     text-align: right;
     margin-top: 1rem;
