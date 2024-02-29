@@ -11,6 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    font-family: Arial, sans-serif; /* Change font family */
 }
 
 #particles-js {
@@ -24,7 +25,8 @@ body {
 
 .calculator {
     background: #ff5e78; 
-    width: 300px;
+    width: 90%; /* Adjust width for responsiveness */
+    max-width: 300px; /* Set maximum width */
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
@@ -40,10 +42,10 @@ body {
     text-align: right;
     height: 50px;
     line-height: 50px;
-    font-size: 36px;
+    font-size: 2rem; /* Adjust font size for better readability */
     padding-right: 10px;
     overflow: hidden;
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Change font family */
     border-radius: 5px;
 }
 
@@ -61,7 +63,7 @@ ul li {
     color: #fff;
     font-family: cursive;
     padding: 20px 0;
-    font-size: 20px;
+    font-size: 1.5rem; /* Adjust font size */
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
